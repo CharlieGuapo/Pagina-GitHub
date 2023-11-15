@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comandos Básicos de Git</title>
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .menu {
+            background-color: #2980b9;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .menu a:hover {
+            color: #2c3e50;
+        }
+
+        .commands {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .command {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .command p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+
+        header {
+            background-color: #3498db;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        .commands {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .command {
+            background-color: #34495e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .command p {
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        .centered-image {
+            display: block;
+            margin: 0 auto; /* Centra horizontalmente */
+            max-width: 100%; /* Ajusta el tamaño máximo */
+            border: 10px solid #000; /* Borde negro */
+            border-radius: 10px; /* Esquinas redondeadas */
+            margin-top: 10px; /* Espaciado superior */
+            margin-bottom: 10px; /* Espaciado inferior */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Comandos Básicos de Git</h1>
+    </header>
+
+    <div class="menu">
+        <a href="#que-es-git">¿Qué es Git?</a>
+        <a href="#conceptos-clave">Conceptos Clave</a>
+        <a href="#git-init">Git init</a>
+        <a href="#git-clone">Git clone</a>
+        <a href="#git-commit">Git commit</a>
+        <a href="#git-status">Git status</a>
+        <a href="#git-log">Git log</a>
+        <a href="#git-push">Git push</a>
+    </div>
+
+    <div class="commands">
+        <div id="que-es-git" class="command">
+            <p><b>¿Qué es Git?</b></p>
+            <p>Git es un sistema de control de versiones distribuido y gratuito que se utiliza para gestionar y realizar un seguimiento de los cambios en el código fuente durante el desarrollo de software. Fue creado por Linus Torvalds en 2005 y se ha convertido en una herramienta estándar en el desarrollo de software.</p>
+
+                <p>Este sistema permite a los desarrolladores colaborar de manera eficiente en proyectos, llevando un historial detallado de cada cambio realizado. Git facilita la identificación de quién hizo qué, cuándo y por qué en cualquier punto del tiempo, lo que resulta invaluable para la colaboración en equipo y el mantenimiento de la integridad del código.</p>
+                
+                <p>Además, Git destaca por su capacidad distribuida, lo que significa que cada usuario tiene una copia completa del historial del proyecto en su máquina local. Esto no solo mejora la velocidad de acceso a la información, sino que también permite a los desarrolladores trabajar de manera independiente, incluso sin una conexión a Internet.</p>
+            <img src="img/GitHub-logo.png" style= "width: 500px; height:300px "class="centered-image"> 
+        </div>
+        <div id="conceptos-clave" class="command">
+            <p><b>Conceptos clave relacionados con Git</b></p>
+            <p>1. Control de Versiones:
+                El control de versiones es una práctica esencial en el desarrollo de software que permite rastrear y gestionar los cambios realizados en el código fuente a lo largo del tiempo. Git proporciona un sistema de control de versiones altamente eficiente, que registra cada modificación, facilitando la colaboración y el mantenimiento del código en proyectos.</p>
+            <p>2. Distribuido:
+                Git es un sistema de control de versiones distribuido, lo que significa que cada desarrollador tiene una copia completa del historial del proyecto en su máquina local. Esta característica no solo mejora la velocidad y la disponibilidad de la información, sino que también permite a los equipos trabajar de manera descentralizada, contribuyendo a un flujo de trabajo más flexible y resistente.</p>
+            <p>3. Repositorio:
+                Un repositorio Git es un almacén que contiene toda la información relacionada con un proyecto, incluidos los archivos, carpetas, y el historial de cambios. Los repositorios pueden ser locales, almacenados en la máquina de un desarrollador, o remotos, ubicados en servidores para facilitar la colaboración entre múltiples contribuyentes.</p>
+            <p>4. Commit:
+                Un commit en Git representa un conjunto de cambios realizados en el código fuente. Al realizar un commit, se registra una instantánea del estado actual del proyecto, junto con un mensaje descriptivo que resume los cambios introducidos. Los commits son esenciales para mantener un historial claro y comprensible del desarrollo del software.</p>
+            <p>5. Pull Request (Solicitud de extracción):
+                Una solicitud de extracción es un mecanismo que permite a los desarrolladores proponer cambios en un repositorio Git. Después de realizar y commit y push de sus cambios a una rama en un repositorio remoto, un desarrollador puede enviar una solicitud de extracción para que los cambios sean revisados y fusionados en la rama principal del proyecto. Esto facilita la colaboración y garantiza una revisión cuidadosa del código antes de su incorporación al proyecto principal.</p>
+            <img src="img/767px-Git_data_flow_simplified.svg.png" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-init" class="command">
+            <p><b>Git init - Iniciar un Repositorio</b></p>
+            <p>"git init" es el primer paso para utilizar Git en un proyecto, convirtiendo un directorio ordinario en un repositorio Git completamente funcional. Este comando sienta las bases para un control de versiones efectivo y es esencial para el desarrollo de software colaborativo y organizado.</p>
+            <img src="img/b59d1deba33d5af47001c174359b43e1ae825327.png" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-clone" class="command">
+            <p><b>Git clone &lt;URL&gt; - Clonar un Repositorio</b></p>
+            <p>El comando git clone desencadena la duplicación de un repositorio Git existente, haciendo una réplica idéntica en tu máquina local. Esta acción resulta fundamental para colaborar en proyectos distribuidos y permite a los desarrolladores trabajar de manera eficiente con el código fuente de otros.</p>
+            <p>Al utilizar git clone seguido de la URL del repositorio remoto, se descarga no solo los archivos actuales del proyecto, sino también su historial completo de cambios. Esto incluye información detallada sobre quién hizo qué modificación, cuándo se realizaron los cambios y los mensajes asociados a cada commit. En resumen, obtienes una copia integral del proyecto en tu entorno de desarrollo.</p>
+            <p>Este proceso facilita la colaboración y la contribución al proyecto. Los desarrolladores pueden realizar cambios en su propia copia del repositorio, experimentar con nuevas características o solucionar problemas, y luego proponer esos cambios de vuelta al repositorio principal mediante solicitudes de extracción (pull requests).</p>
+            <P>Además, la clonación de un repositorio es un paso esencial para trabajar en un entorno local sin necesidad de una conexión constante a Internet. Esto permite a los desarrolladores experimentar, probar y modificar el código de manera eficiente antes de contribuir al proyecto central.</P>
+            <img src="img/git clone-dccafa27-67d5-4132-8ff8-16fa03d02bb8.png" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-commit" class="command">
+            <p><b>Git commit -m "Mensaje" - Realizar un Commit</b></p>
+            <p>git commit es esencial para registrar cambios específicos en el historial del repositorio. La combinación del área de preparación y los mensajes descriptivos aseguran que el historial de commits sea claro, comprensible y útil para los desarrolladores que trabajan en el proyecto.</p>
+            <img src="img/commits.png" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-status" class="command">
+            <p><b>Git status - Ver el Estado de los Archivos y Cambios</b></p>
+            <p>El comando git log es una herramienta poderosa para explorar y comprender la evolución de un repositorio. Al ejecutar este comando, se muestra el historial completo de commits, proporcionando información detallada sobre cada cambio realizado en el código fuente.</p>
+            <p>En resumen, git log es una herramienta esencial para explorar y comprender el historial de un proyecto Git, proporcionando una visión detallada y ordenada de todos los cambios realizados a lo largo del tiempo.</p>
+            <img src="img/descarga.png" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-log" class="command">
+            <p><b>Git log - Ver el Historial de Commits</b></p>
+            <p>Muestra el historial completo de commits en el repositorio. Proporciona información sobre el autor, la fecha y el mensaje de cada commit.</p>
+            <img src="img/git.jpg" style= "width: 400px; height:400px "class="centered-image"> 
+        </div>
+        <div id="git-push" class="command">
+            <p><b>Git push origin &lt;rama&gt; - Enviar Cambios al Repositorio Remoto</b></p>
+            <p>Sube tus cambios locales a un repositorio remoto en la rama especificada. Es común usar este comando después de realizar commits locales para compartir tus cambios con otros colaboradores.</p>
+            <img src="img/Git push-88e4f9c0-01af-4253-b351-5e9a036e5a43.webp" style= "width: 400px; height:400px " class="centered-image"> 
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+
